@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 var user_id;
-test('Get user', async ({request }) => {
+test('Get user CICD', async ({request }) => {
   // ส่ง request ไปยัง reqres.in
   const response = await request.get('https://reqres.in/api/users');
   // ตรวจสอบว่า status ของ response เป็น 200
@@ -18,7 +18,7 @@ test('Get userapi', async ({ request }) => {
     user_id = res.id
   });
 
-  test('Update user ', async ({ request }) => {
+  test('Update user CICD ', async ({ request }) => {
     // ส่ง request ไปยัง reqres.put
     const response = await request.put('https://reqres.in/api/users/'+user_id,
         {
@@ -29,7 +29,7 @@ test('Get userapi', async ({ request }) => {
     expect(response.status()).toBe(200);
   });
   
-  test('Delete user ', async ({ request }) => {
+  test('Delete user CICD', async ({ request }) => {
     // ส่ง request ไปยัง reqres.delete
     const response = await request.delete('https://reqres.in/api/users/'+user_id);
    
