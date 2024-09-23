@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: '1 * * * *'  # รันทุกชั่วโมงเมื่อถึงนาทีที่ 1
+    - cron: '*/1 * * * *'
 
 jobs:
   test:
